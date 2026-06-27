@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Family · Dadlani Family</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ── MEMBER GRID ── */
+    .members {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 48px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: rgba(201,168,76,0.1);
+    }
+
+    .member {
+      background: var(--navy);
+      padding: 52px 48px;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .member:hover { background: var(--navy-lt); }
+
+    .member-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .member-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(28px, 3.5vw, 40px);
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+
+    .member-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(14px, 1.8vw, 17px);
+      color: var(--slate-lt);
+      margin-bottom: 28px;
+      line-height: 1.4;
+    }
+
+    .member-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.4;
+      margin-bottom: 24px;
+    }
+
+    .member-bio {
+      font-size: 13px;
+      line-height: 1.95;
+      color: var(--slate-lt);
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
+
+    .member-highlights {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .member-highlights li {
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--slate);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .member-highlights li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .member-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .member-link:hover { color: var(--gold-lt); border-color: var(--gold-lt); }
+
+    .member-link svg {
+      width: 12px; height: 12px;
+      fill: currentColor;
+    }
+
+    @media (max-width: 768px) {
+      .members { grid-template-columns: 1fr; padding: 0 0 60px; }
+      .member { padding: 44px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Dad<span>lani</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/history/">Our Story</a></li>
+    <li><a href="/family/" class="active">Family</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-hero">
+    <p class="eyebrow">The Family</p>
+    <h1 class="page-title">Meet the Dadlanis</h1>
+  </div>
+
+  <div class="rule" style="margin-bottom: 0; padding-bottom: 0;">
+    <div class="rule-line"></div>
+    <div class="rule-diamond"></div>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="members">
+
+    <!-- SUNIL -->
+    <div class="member">
+      <div class="member-eyebrow">Princeton, NJ &nbsp;·&nbsp; Originally Hong Kong</div>
+      <h2 class="member-name">Sunil Dadlani</h2>
+      <div class="member-title">Executive Vice President, Payment Solutions &nbsp;·&nbsp; MedRisk</div>
+      <div class="member-rule"></div>
+      <p class="member-bio">
+        A healthcare executive with over two decades of experience in the property and casualty insurance space, Sunil currently leads digital payment adoption at MedRisk. His career spans executive roles at Gallagher Bassett, InnovaCare Health, and One Call, where he grew one of the company's largest books of business. Born and raised in Hong Kong, educated at City University of Hong Kong and Indiana University, Sunil brings a global perspective to every challenge. Outside of work, he is a hands-on property investor and an enthusiastic jack of all trades.
+      </p>
+      <ul class="member-highlights">
+        <li>EVP Payment Solutions, MedRisk (2026–present)</li>
+        <li>18+ years in healthcare executive leadership</li>
+        <li>BA Hons, City University of Hong Kong &nbsp;·&nbsp; Indiana University Bloomington</li>
+      </ul>
+      <a class="member-link" href="https://www.linkedin.com/in/sdadlani/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <!-- JASMINE -->
+    <div class="member">
+      <div class="member-eyebrow">Princeton, NJ &nbsp;·&nbsp; Originally Washington D.C.</div>
+      <h2 class="member-name">Jasmine Dadlani</h2>
+      <div class="member-title">Chief Strategy Officer &nbsp;·&nbsp; McKinney</div>
+      <div class="member-rule"></div>
+      <p class="member-bio">
+        A nationally recognized brand strategist, Jasmine has spent over two decades shaping some of the most compelling brand narratives in advertising. As CSO at McKinney, she leads strategy across a multi-city agency operating in Durham, LA, NYC, Phoenix, Dallas, and Toronto. A Northwestern University alumna, her career has taken her through Deutsch, Arnold Worldwide, and Cramer-Krasselt. In 2025, she was named to the Adweek 50 and recognized as a Trailblazer by Working Mothers of the Year.
+      </p>
+      <ul class="member-highlights">
+        <li>Chief Strategy Officer, McKinney (2021–present)</li>
+        <li>Adweek 50 of 2025 &nbsp;·&nbsp; 2026 Working Mothers Trailblazer</li>
+        <li>BS Communication Studies, Northwestern University</li>
+      </ul>
+      <a class="member-link" href="https://www.linkedin.com/in/jasmine-dadlani-44a48942/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <!-- SHREYA -->
+    <div class="member">
+      <div class="member-eyebrow">Lehigh University &nbsp;·&nbsp; Class of 2029</div>
+      <h2 class="member-name">Shreya Dadlani</h2>
+      <div class="member-title">Student-Athlete &nbsp;·&nbsp; Psychology & Marketing</div>
+      <div class="member-rule"></div>
+      <p class="member-bio">
+        Shreya is a Dean's List student at Lehigh University pursuing a double focus in Psychology and Marketing, while competing as a D1 Patriot League athlete in Women's Rowing. She brings the same discipline to the water as she does to the classroom. Alongside her studies, she has gained professional experience as a Marketing Intern at Alius Health, where she designs client-facing materials for healthcare audiences. A West Windsor-Plainsboro High School South alumna, she has also pursued programs at Northwestern University and NYU.
+      </p>
+      <ul class="member-highlights">
+        <li>D1 NCAA Women's Rowing, Patriot League &nbsp;·&nbsp; Lehigh University</li>
+        <li>Marketing Intern, Alius Health (2026–present)</li>
+        <li>Dean's List &nbsp;·&nbsp; BA Psychology & Marketing (expected 2029)</li>
+      </ul>
+      <a class="member-link" href="https://www.linkedin.com/in/shreya-dadlani-7273b6394/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+
+    <!-- JHANAK -->
+    <div class="member">
+      <div class="member-eyebrow">The Peddie School &nbsp;·&nbsp; Princeton, NJ</div>
+      <h2 class="member-name">Jhanak Dadlani</h2>
+      <div class="member-title">Student &nbsp;·&nbsp; Law & Criminal Justice</div>
+      <div class="member-rule"></div>
+      <p class="member-bio">
+        Jhanak is a student at The Peddie School with a clear-eyed ambition to pursue a career in law and criminal justice. An accomplished public speaker and debater, she has been recognized with Distinguished Speaker and Top 10 placements through Capitol Debate, and was elected Vice President of her class through Toastmasters International. She has pursued coursework in Entrepreneurship at Duke University and Criminal Justice at New York University, building an early academic foundation as distinctive as her voice.
+      </p>
+      <ul class="member-highlights">
+        <li>Student, The Peddie School (2025–2027)</li>
+        <li>Toastmasters: Class VP &nbsp;·&nbsp; Best Speech Overall</li>
+        <li>Capitol Debate: Distinguished Speaker &nbsp;·&nbsp; Top 10</li>
+      </ul>
+      <a class="member-link" href="https://www.linkedin.com/in/jhanak-dadlani-320503387/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn Profile
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 &nbsp;·&nbsp; dadlani.net &nbsp;·&nbsp; All rights reserved</p>
+</footer>
+
+</body>
+</html>

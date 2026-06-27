@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:     #1A2340;
+  --navy-lt:  #222d4e;
+  --gold:     #C9A84C;
+  --gold-lt:  #e2c97e;
+  --cream:    #F7F4EF;
+  --slate:    #8A93A6;
+  --slate-lt: #b0b8c8;
+  --white:    #FFFFFF;
+  --max:      1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(26,35,64,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.nav-logo span { color: var(--gold); }
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--slate-lt);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--gold); }
+
+/* ── MAIN ── */
+main { flex: 1; padding-top: 80px; }
+
+/* ── PAGE HERO (inner pages) ── */
+.page-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 64px;
+  position: relative;
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.4), transparent);
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(40px, 6vw, 72px);
+  letter-spacing: 0.1em;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 72px 48px;
+}
+
+/* ── RULE ── */
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto 64px;
+  max-width: var(--max);
+  padding: 0 48px;
+}
+.rule-line { flex: 1; height: 1px; background: rgba(201,168,76,0.2); }
+.rule-diamond {
+  width: 6px; height: 6px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 40px 24px;
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+footer p {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(138,147,166,0.45);
+}
+
+/* ── CREST ornament ── */
+.crest {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+}
+.crest-line { width: 60px; height: 1px; background: linear-gradient(to right, transparent, var(--gold)); }
+.crest-line-r { width: 60px; height: 1px; background: linear-gradient(to left, transparent, var(--gold)); }
+.crest-diamond { width: 8px; height: 8px; border: 1px solid var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+/* ── UTIL ── */
+a { color: var(--gold); text-decoration: none; }
+a:hover { color: var(--gold-lt); }
+
+@media (max-width: 768px) {
+  nav { padding: 16px 24px; }
+  .nav-links { gap: 20px; }
+  .section { padding: 48px 24px; }
+  .rule { padding: 0 24px; }
+}
+
+@media (max-width: 480px) {
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: 10px; letter-spacing: 0.12em; }
+}

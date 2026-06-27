@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dadlani Family · dadlani.net</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── HOME HERO ── */
+    .home-hero {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .home-crest { margin-bottom: 44px; }
+
+    .home-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(64px, 11vw, 128px);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .home-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(14px, 2vw, 19px);
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      margin-bottom: 52px;
+    }
+
+    .home-tagline {
+      font-size: clamp(12px, 1.5vw, 14px);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      max-width: 440px;
+      line-height: 2.2;
+      margin-bottom: 56px;
+    }
+
+    .home-nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .home-nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate-lt);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      padding-bottom: 3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .home-nav-links a:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ── SCROLL INDICATOR ── */
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scroll-hint span {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(138,147,166,0.4);
+    }
+
+    .scroll-hint-line {
+      width: 1px;
+      height: 32px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.4), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ── INTRO STRIP ── */
+    .intro-strip {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 72px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px;
+      background: rgba(201,168,76,0.1);
+    }
+
+    .intro-item {
+      background: var(--navy);
+      padding: 40px 36px;
+      text-align: center;
+    }
+
+    .intro-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .intro-label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+
+    /* ── ANIMATIONS ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .home-crest, .home-name, .home-sub, .home-crest2, .home-tagline, .home-nav-links {
+        opacity: 0;
+        animation: fadeUp 0.9s ease forwards;
+      }
+      .home-crest       { animation-delay: 0.1s; }
+      .home-name        { animation-delay: 0.3s; }
+      .home-sub         { animation-delay: 0.45s; }
+      .home-crest2      { animation-delay: 0.45s; }
+      .home-tagline     { animation-delay: 0.6s; }
+      .home-nav-links   { animation-delay: 0.75s; }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    @media (max-width: 640px) {
+      .intro-strip { grid-template-columns: 1fr; }
+      .home-nav-links { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Dad<span>lani</span></a>
+  <ul class="nav-links">
+    <li><a href="/" class="active">Home</a></li>
+    <li><a href="/history/">Our Story</a></li>
+    <li><a href="/family/">Family</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="home-hero">
+    <div class="crest home-crest">
+      <div class="crest-line"></div>
+      <div class="crest-diamond"></div>
+      <div class="crest-line-r"></div>
+    </div>
+
+    <h1 class="home-name">Dadlani</h1>
+    <p class="home-sub">Hong Kong &nbsp;·&nbsp; Washington D.C. &nbsp;·&nbsp; Princeton, NJ</p>
+
+    <div class="crest home-crest2" style="margin-bottom: 48px;">
+      <div class="crest-line"></div>
+      <div class="crest-diamond"></div>
+      <div class="crest-line-r"></div>
+    </div>
+
+    <p class="home-tagline">A family rooted in three cities across two continents.<br>Welcome to dadlani.net.</p>
+
+    <ul class="home-nav-links">
+      <li><a href="/history/">Our Story</a></li>
+      <li><a href="/family/">The Family</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-hint-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <div style="background: rgba(201,168,76,0.08); padding: 1px 0;">
+    <div class="intro-strip">
+      <div class="intro-item">
+        <div class="intro-number">1972</div>
+        <div class="intro-label">Roots established in Hong Kong</div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-number">2005</div>
+        <div class="intro-label">Settled in Princeton, New Jersey</div>
+      </div>
+      <div class="intro-item">
+        <div class="intro-number">4</div>
+        <div class="intro-label">Members of the Dadlani family</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 &nbsp;·&nbsp; dadlani.net &nbsp;·&nbsp; All rights reserved</p>
+</footer>
+
+</body>
+</html>

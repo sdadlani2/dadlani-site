@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story · Dadlani Family</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ── TIMELINE ── */
+    .timeline {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 48px 80px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: calc(48px + 28px);
+      top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--gold) 0%, rgba(201,168,76,0.1) 100%);
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0 32px;
+      margin-bottom: 64px;
+      position: relative;
+    }
+
+    .tl-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-align: right;
+      padding-top: 4px;
+      position: relative;
+    }
+
+    .tl-year::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 10px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: 1px solid var(--gold);
+      background: var(--navy);
+    }
+
+    .tl-content {}
+
+    .tl-place {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .tl-body {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--slate-lt);
+      font-weight: 300;
+    }
+
+    /* ── PULL QUOTE ── */
+    .pull-quote {
+      max-width: 700px;
+      margin: 0 auto 72px;
+      padding: 0 48px;
+      text-align: center;
+    }
+
+    .pull-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(20px, 3vw, 28px);
+      line-height: 1.6;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+
+    .pull-quote cite {
+      display: block;
+      margin-top: 16px;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    @media (max-width: 640px) {
+      .timeline { padding: 0 24px 60px; }
+      .timeline::before { left: calc(24px + 28px); }
+      .pull-quote { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">Dad<span>lani</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/history/" class="active">Our Story</a></li>
+    <li><a href="/family/">Family</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <div class="page-hero">
+    <p class="eyebrow">Our Story</p>
+    <h1 class="page-title">From Hong Kong<br>to Princeton</h1>
+  </div>
+
+  <div class="pull-quote">
+    <blockquote>
+      A journey across two continents, three cities, and five decades — shaped by ambition, family, and a sense of home wherever we land.
+    </blockquote>
+    <cite>The Dadlani Family</cite>
+  </div>
+
+  <div class="rule">
+    <div class="rule-line"></div>
+    <div class="rule-diamond"></div>
+    <div class="rule-line"></div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-year">1972</div>
+      <div class="tl-content">
+        <div class="tl-place">Hong Kong</div>
+        <p class="tl-body">
+          The Dadlani family established its roots in Hong Kong in 1972. Sunil was born and raised in one of the world's most dynamic cities — a place defined by ambition, cultural confluence, and relentless energy. His parents made Hong Kong their permanent home, and they remain there to this day. Sunil attended City University of Hong Kong, earning a BA Honours in Management Information Systems before continuing his education at Indiana University Bloomington in the United States.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Late 1990s</div>
+      <div class="tl-content">
+        <div class="tl-place">Washington, D.C. Area</div>
+        <p class="tl-body">
+          Following his studies, Sunil relocated to the Washington D.C. area, joining the bustling technology and consulting corridor of Tysons Corner, Virginia. Over the next several years he built his career across organizations including Cable & Wireless, the American Red Cross, Freddie Mac, and Nextel-Sprint — developing deep expertise in project management, business analysis, and enterprise systems. It was in the D.C. area that Sunil and Jasmine built their life together and started their family.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">2005</div>
+      <div class="tl-content">
+        <div class="tl-place">Princeton, New Jersey</div>
+        <p class="tl-body">
+          In 2005, the Dadlani family moved to Princeton, New Jersey — the place they have called home ever since. Sunil joined One Call, where he would spend nearly two decades growing into senior executive leadership. Jasmine built an acclaimed career in brand strategy, ultimately becoming Chief Strategy Officer at McKinney. Their two daughters, Shreya and Jhanak, were raised here, attended West Windsor-Plainsboro High School South, and have each gone on to pursue their own paths — Shreya as a D1 student-athlete at Lehigh University, and Jhanak at The Peddie School with ambitions in law and public service.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-year">Today</div>
+      <div class="tl-content">
+        <div class="tl-place">Princeton &nbsp;·&nbsp; Hong Kong</div>
+        <p class="tl-body">
+          Today, Princeton remains the heart of the Dadlani family's daily life. Sunil serves as Executive Vice President of Payment Solutions at MedRisk. Jasmine continues to lead strategy at McKinney, recognized as a finalist for Strategist of the Year and named to the Adweek 50 of 2025. Back in Hong Kong, Sunil's parents remain rooted in the city where it all began — a reminder that no matter how far the journey takes you, home is always part of who you are.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 &nbsp;·&nbsp; dadlani.net &nbsp;·&nbsp; All rights reserved</p>
+</footer>
+
+</body>
+</html>
