@@ -8,25 +8,16 @@
   <style>
     /* ── TIMELINE ── */
     .timeline {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 0 48px 80px;
       position: relative;
     }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: calc(48px + 28px);
-      top: 0; bottom: 0;
-      width: 1px;
-      background: linear-gradient(to bottom, var(--gold) 0%, rgba(201,168,76,0.1) 100%);
-    }
-
     .tl-item {
       display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 0 32px;
+      grid-template-columns: 100px 24px 1fr;
+      gap: 0 16px;
       margin-bottom: 64px;
       position: relative;
     }
@@ -39,21 +30,35 @@
       color: var(--gold);
       text-align: right;
       padding-top: 4px;
-      position: relative;
     }
 
-    .tl-year::after {
-      content: '';
-      position: absolute;
-      right: -40px;
-      top: 10px;
-      width: 8px; height: 8px;
+    .tl-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tl-dot {
+      width: 10px; height: 10px;
       border-radius: 50%;
       border: 1px solid var(--gold);
       background: var(--navy);
+      flex-shrink: 0;
+      margin-top: 4px;
+      position: relative;
+      z-index: 1;
     }
 
-    .tl-content {}
+    .tl-track {
+      flex: 1;
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(201,168,76,0.5), rgba(201,168,76,0.05));
+      margin-top: 4px;
+    }
+
+    .tl-content {
+      padding-top: 0;
+    }
 
     .tl-place {
       font-family: 'Cormorant Garamond', serif;
@@ -102,8 +107,9 @@
     }
 
     @media (max-width: 640px) {
-      .timeline { padding: 0 24px 60px; }
-      .timeline::before { left: calc(24px + 28px); }
+      .timeline { padding: 0 16px 60px; }
+      .tl-item { grid-template-columns: 72px 20px 1fr; gap: 0 10px; }
+      .tl-year { font-size: 11px; }
       .pull-quote { padding: 0 24px; }
     }
   </style>
@@ -143,6 +149,7 @@
 
     <div class="tl-item">
       <div class="tl-year">1972</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-track"></div></div>
       <div class="tl-content">
         <div class="tl-place">Hong Kong</div>
         <p class="tl-body">
@@ -153,6 +160,7 @@
 
     <div class="tl-item">
       <div class="tl-year">Late 1990s</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-track"></div></div>
       <div class="tl-content">
         <div class="tl-place">Washington, D.C. Area</div>
         <p class="tl-body">
@@ -163,6 +171,7 @@
 
     <div class="tl-item">
       <div class="tl-year">2005</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-track"></div></div>
       <div class="tl-content">
         <div class="tl-place">Princeton, New Jersey</div>
         <p class="tl-body">
@@ -173,6 +182,7 @@
 
     <div class="tl-item">
       <div class="tl-year">Today</div>
+      <div class="tl-line"><div class="tl-dot"></div><div class="tl-track"></div></div>
       <div class="tl-content">
         <div class="tl-place">Princeton &nbsp;·&nbsp; Hong Kong</div>
         <p class="tl-body">
