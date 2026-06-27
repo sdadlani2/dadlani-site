@@ -49,9 +49,12 @@ nav {
   text-transform: uppercase;
   color: var(--cream);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-.nav-logo span { color: var(--gold); }
+.nav-logo:hover { color: var(--gold); }
+
+.nav-logo span { color: inherit; }
 
 .nav-links {
   display: flex;
